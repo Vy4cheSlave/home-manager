@@ -24,6 +24,8 @@ git clone ...
 
 ehco 'experimental-features = nix-command flakes' >> ~/.config/nix/nix.conf 
 
+[4 пункт обяязательно (не знаю пока нахуя только)](https://nix-community.github.io/home-manager/index.xhtml#ch-installation)
+
 cd ~/home-manager
 
 nix-shell -p home-manager
