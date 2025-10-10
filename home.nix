@@ -2,7 +2,7 @@
 {
   home = {
     packages = with pkgs; [
-      hello
+      
     ];
 
     username = "vch";
@@ -10,4 +10,7 @@
 
     stateVersion = "25.05";
   };
+
+  targets.genericLinux.enable = true; # ENABLE THIS ON NON NIXOS
+  programs.home-manager.enable = true;
 }
