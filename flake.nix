@@ -27,7 +27,7 @@
       pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
     in {
 
-      systemConfigs.${system}.default = inputs.system-manager.lib.makeSystemConfig {
+      systemConfigs.x86_64-linux.default = inputs.system-manager.lib.makeSystemConfig {
         modules = [
           inputs.nix-system-graphics.systemModules.default
           ({
