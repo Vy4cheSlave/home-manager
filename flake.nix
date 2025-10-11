@@ -24,7 +24,7 @@
       username = "vch";
       lib = nixpkgs.lib;
       system = "x86_64-linux";
-      pkgs = import nixpkgs { system = "${username}"; config.allowUnfree = true; };
+      pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
     in {
 
       systemConfigs.default = inputs.system-manager.lib.makeSystemConfig {
