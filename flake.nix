@@ -33,7 +33,7 @@
           ({
             config = {
               nixpkgs.hostPlatform = "${system}";
-              inputs.system-manager.allowAnyDistro = true;
+              system-manager.allowAnyDistro = true;
               system-graphics.enable = true;
             };
           })
