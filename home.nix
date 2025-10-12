@@ -2,7 +2,16 @@
 {
   home = {
     packages = with pkgs; [
-      
+      ghostty
+      librewolf
+      helix
+      git
+      gnumake
+      obsidian
+      rofi
+      # не разобрался как работает пока
+      # zapret
+      # nftables      
     ];
 
     username = "vch";
