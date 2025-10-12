@@ -14,7 +14,7 @@
 
 `make`
 
-[nix](https://nixos.org/download.html) (я пользуюсь Single-user installation)
+[nix](https://nixos.org/download.html) (ONLY Multi-user installation)
 
 ---
 
@@ -31,16 +31,16 @@ git clone this repo
 
 cd ~/home-manager
 
-sudo $(which system-manager) switch --flake .
-
-# test
-nix shell 'nixpkgs#mesa-demos' --command glxgears
-
 nix-shell -p home-manager
 
 make update
 
 exit
+
+sudo $(which system-manager) switch --flake .
+
+# test
+nix shell 'nixpkgs#mesa-demos' --command glxgears
 ```
 
 ---
