@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    niri.url = "github:sodiboo/niri-flake";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -24,6 +26,10 @@
           inherit pkgs;
           modules = [ 
             ./configuration.nix
+            (import ./local.nix)
+
+            inputs.niri.nixosModules.niri
+            
             inputs.home-manager.nixosModules.home-manager {
               home-manager = {
                 useGlobalPkgs = true;

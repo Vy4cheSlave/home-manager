@@ -1,6 +1,7 @@
 .PHONY: update
 update:
-	home-manager switch --flake .#vch
+	sudo nixos-rebuild --impure switch --flake .#vch
+	# home-manager switch --flake .#vch
 
 .PHONY: clean
 clean:

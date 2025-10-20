@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+#      ./hardware-configuration.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -46,7 +46,17 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-  
+  # Enable the Niri WM ########################################
+  programs.niri = {
+    enable = true;
+    #extraConfig = ''
+    #  exec-once = [ 
+    #    "alacritty" 
+    #    "waybar"
+    #  ];
+    #'';
+  };
+  #############################################################
 
   # Configure keymap in X11
   services.xserver.xkb.layout = "us,ru";
