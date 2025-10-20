@@ -4,12 +4,13 @@
     packages = with pkgs; [
       jetbrains-mono # fonts
       ghostty
-      librewolf
+      #librewolf
       helix
       git
       gnumake
-      obsidian
-      rofi
+      vscodium
+      #obsidian
+      #rofi
       # не разобрался как работает пока
       # zapret
       # nftables      
@@ -19,6 +20,15 @@
     homeDirectory = "/home/vch";
 
     stateVersion = "25.05";
+  };
+
+  programs.zsh = {
+    enable = true;
+  };
+  programs.git = {
+    enable = true;
+    userName = "Vy4cheSlave";
+    userEmail = "slav.subocheff@yandex.ru";
   };
 
   targets.genericLinux.enable = true; # ENABLE THIS ON NON NIXOS
