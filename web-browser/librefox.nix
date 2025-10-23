@@ -79,7 +79,7 @@
           "ui.systemUsesDarkTheme" = lock-true;
           "sidebar.animation.enabled" = lock-false;
           "sidebar.main.tools" = { Value = "history,syncedtabs,bookmarks"; Status = "locked"; }
-          "sidebar.position_start" = lock-true;
+          "sidebar.position_start"; # = lock-true;
           "sidebar.revamp" = lock-true;
           "sidebar.visibility" = { Value = "hide-sidebar"; Status = "locked"; };
           "sidebar.verticalTabs" = lock-true;
