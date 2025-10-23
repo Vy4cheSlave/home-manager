@@ -75,27 +75,33 @@
 ;   (bar))
 
 
-; rm -r ~/.config/eww/ && cp -rf ~/nixos/bar/eww ~/.config/eww && eww open bar --restart
+; rm -rf ~/.config/eww/ && cp -rf ~/nixos/bar/eww ~/.config/eww && eww open bar --restart
 (defwindow bar
     :monitor 0 ;'[ "0", "<primary>" ]'
     :geometry (geometry 
         :x "0%"
         :y "0%"
         :width "100%"
-        :height "3%"
+        :height "4%"
         :anchor "top center"
+        :vexpand false
     )
     :stacking "bottom"
     :exclusive true ; Если true :anchor должен включать в себя center
     (centerbox
         :orientation "h"
-
-        "left"
+        :class "outline"
+        (box 
+            :class "clock"
+            "| battary: ${EWW_BATTERY?.BAT0.capacity} |"
+        )
         (label
-            :class "time-class" ; Примените класс для метки времени
+            :hexpand true
+            :truncate true
+            :class "clock"
             :text "${formattime(EWW_TIME, "%H:%M")}"
         )
-        "right"
+        (box)
     )
 )
 

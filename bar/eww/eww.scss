@@ -3,11 +3,35 @@
 	font-family: JetBrains Mono;
 }
 
-// Цветовая палитра Catpuccin Mocha Blue
-// $background: #1f1f2e;
-// $foreground: #c6c6e5;
-// $accent: #e1a6cb; // голубоватый оттенок
-// $border: #4e4e4e;
-// $hover-background: #28303e;
-// $active-background: #7a9cb1; // более светлый голубой оттенок
-// $text-color: #d6d8e0;
+.outline {
+  border: 2px solid #4c5667;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+  color: #c5c4ca;
+  font-family: "Sans";
+  font-size: 10pt;
+}
+
+.button {
+  background-color: #302f3f;
+  border: 1px solid #4c5667;
+  color: #c5c4ca;
+  padding: 6px 12px;
+}
+
+.entry {
+  background-color: #302f3f;
+  border: 1px solid #4c5667;
+  color: #c5c4ca;
+  padding: 6px 12px;
+}
+
+.clock {
+  border: 1px solid #4c5667;
+  font-size: 180%;
+  font-weight: bold;
+  color: #c5c4ca;
+}
