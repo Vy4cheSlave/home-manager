@@ -75,7 +75,8 @@
         /* ---- PREFERENCES ---- */
         # Check about:config for options.
         Preferences = {
-          # "ui.systemUsesDarkTheme" = { Value = 3; Status = "unlocked"; }; # 1 = включена темная тема
+          "privacy.resistFingerprinting" = lock-false;
+          "ui.systemUsesDarkTheme" = lock-true;
           "sidebar.verticalTabs" = lock-true;
           "sidebar.verticalTabs.dragToPinPromo.dismissed" = lock-true;
           "identity.fxaccounts.enabled" = { Value = true; Status = "locked"; };  # Включение синхронизации
