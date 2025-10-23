@@ -34,7 +34,7 @@
       # eww ###############
       libnotify
       #####################
-    ];
+    ] ++ builtins.filter lib.attrsets.isDerivation (pkgs.nerd-fonts);
 
     username = "vch";
     homeDirectory = "/home/vch";
