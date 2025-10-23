@@ -76,7 +76,7 @@
         # Check about:config for options.
         Preferences = {
           "ui.systemUsesDarkTheme" = { Value = 3; Status = "locked"; }; # 1 = включена темная тема
-          "sidebar.verticalTabs" = { Value = false; Status = "locked"; };
+          "sidebar.verticalTabs" = { Value = true; Status = "locked"; };
           "identity.fxaccounts.enabled" = { Value = true; Status = "locked"; };  # Включение синхронизации
           "browser.startup.page" = { Value = 3; Status = "locked"; }; # 1: новые вкладки, 2: домашняя страница, 3: предыдущие вкладки
           "browser.sessionstore.resume_from_crash" = { Value = true; Status = "locked"; }; # Восстанавливать предыдущие вкладки после сбоя
