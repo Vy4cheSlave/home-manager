@@ -76,7 +76,7 @@
         # Check about:config for options.
         Preferences = {
           "privacy.resistFingerprinting" = lock-false;
-          "ui.systemUsesDarkTheme" = lock-true;
+          "ui.systemUsesDarkTheme" = { Value = 3; Status = "locked"; };
           "sidebar.verticalTabs" = lock-true;
           "sidebar.verticalTabs.dragToPinPromo.dismissed" = lock-true;
           "identity.fxaccounts.enabled" = { Value = true; Status = "locked"; };  # Включение синхронизации
