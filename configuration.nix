@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-#      ./hardware-configuration.nix
+
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -18,6 +18,7 @@
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.insertNameservers = [ "8.8.8.8" "1.1.1.1" "8.8.4.4" ];
 
   # Set your time zone.
   time.timeZone = "Asia/Novosibirsk";
@@ -25,6 +26,25 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+### Nekoray ##########################################################
+  security.wrappers.nekobox_core = {
+    enable = true;
+    source = "${pkgs.nekoray.nekobox-core}/bin/nekobox_core";
+    program = "nekobox_core";
+    owner = "vch";   # твой пользователь
+    group = "users";
+    capabilities = "cap_net_admin+ep";
+  };
+######################################################################
+
+### Fonts ######################
+  fonts.packages = with pkgs; [
+    jetbrains-mono
+    nerd-fonts.jetbrains-mono
+  ];
+
+  fonts.enableDefaultPackages = true; 
+################################
 
   # Select internationalisation properties.
   i18n.defaultLocale = "ru_RU.UTF-8";
@@ -45,18 +65,13 @@
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-  # Enable the Niri WM ########################################
+  # services.xserver.desktopManager.gnome.enable = true;
+### Niri WM ###################################################
   programs.niri = {
     enable = true;
-    #extraConfig = ''
-    #  exec-once = [ 
-    #    "alacritty" 
-    #    "waybar"
-    #  ];
-    #'';
   };
-  #############################################################
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+###############################################################
 
   # Configure keymap in X11
   services.xserver.xkb.layout = "us,ru";
@@ -66,16 +81,34 @@
   # services.printing.enable = true;
 
   # Enable sound.
-  services.pulseaudio = {
-    enable = true;
-    support32Bit = true;
-  };
-  services.pipewire.enable = lib.mkForce false;
+  # services.pulseaudio = {
+  #   enable = true;
+  #   support32Bit = true;
+  # };
+  # services.pipewire.enable = lib.mkForce false;
   # OR
   # services.pipewire = {
   #   enable = true;
   #   pulse.enable = true;
   # };
+
+### Bluetooth ######################################################
+  hardware.bluetooth = {
+    enable = true;                # Включить Bluetooth
+    powerOnBoot = true;          # Включить Bluetooth при загрузке
+    package = pkgs.bluez;        # Использовать пакет bluez
+    settings = {
+      General = {
+        Experimental = true;      # Функции Bluetooth могут быть экспериментальными
+        FastConnectable = true;   # Ускорить подключение
+      };
+      Policy = {
+        AutoEnable = true;        # Автоматически включать контроллеры
+      };
+    };
+  };
+  services.blueman.enable = true;
+####################################################################
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
@@ -89,7 +122,7 @@
     ];
   };
 
-  programs.firefox.enable = true;
+  # programs.firefox.enable = true;
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
