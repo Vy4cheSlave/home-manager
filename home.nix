@@ -1,8 +1,14 @@
 { lib, pkgs, ... }:
 {
+  imports = [ 
+    #./web-browser/librefox.nix 
+  ];
+
   home = {
     packages = with pkgs; [
       jetbrains-mono # fonts
+      nerd-fonts.jetbrains-mono
+      #########################
       ghostty
       #librewolf
       helix
@@ -10,6 +16,8 @@
       gnumake
       vscodium
       #obsidian
+      nekoray
+      btop
       #rofi
       # не разобрался как работает пока
       # zapret
@@ -17,6 +25,9 @@
 
       # niri ##############
       swaybg
+      #####################
+      # eww ###############
+      libnotify
       #####################
     ];
 
@@ -26,6 +37,11 @@
     stateVersion = "25.05";
   };
 
+  programs.obsidian = {
+    enable = true;
+    # я ебал этого пидараса
+    #vaults.obsidian.target = "documents/obsidian";
+  };
   programs.zsh = {
     enable = true;
   };
@@ -40,7 +56,6 @@
   # niri ##############################################################################################
   xdg.configFile."niri/config.kdl".source = ./niri/config.kdl;
 
-  programs.alacritty.enable = true; # Super+T in the default setting (terminal)
   programs.fuzzel.enable = true; # Super+D in the default setting (app launcher)
   programs.swaylock.enable = true; # Super+Alt+L in the default setting (screen locker)
   programs.waybar.enable = true; # launch on startup in the default setting (bar)
@@ -48,12 +63,9 @@
   services.swayidle.enable = true; # idle management daemon
   services.polkit-gnome.enable = true; # polkit
 
-  home.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-  };
-
-  home.shellAliases = {
-    codium = "codium --wayland-text-input-version=3";
+  programs.eww = {
+    enable = true;
+    #configDir = ./bar/eww;
   };
   #####################################################################################################
 }
