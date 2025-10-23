@@ -8,8 +8,8 @@
     packages = with pkgs; [
       # fonts #################
       jetbrains-mono 
-      nerd-fonts.jetbrains-mono
-      nerdfonts.nerd-fonts-agave
+      # nerd-fonts.jetbrains-mono
+      # nerdfonts.nerd-fonts-agave
       nerdfonts.nerd-fonts-3270
       #########################
       ghostty
@@ -32,7 +32,7 @@
       # eww ###############
       libnotify
       #####################
-    ] ++ lib.attrValues (builtins.filter lib.attrsets.isDerivation pkgs.nerd-fonts);
+    ];
 
     username = "vch";
     homeDirectory = "/home/vch";
