@@ -9,7 +9,7 @@
       # fonts #################
       jetbrains-mono 
       nerd-fonts.jetbrains-mono
-      nerd-fonts.nerd-fonts-agave
+      nerd-fonts.agave
       nerd-fonts._3270
       #########################
       ghostty
