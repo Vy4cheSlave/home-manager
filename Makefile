@@ -1,7 +1,7 @@
 .PHONY: update
-update:
+update: # правило написаное кровью
 	git add .
-	git commit -m "$(date -u +'%Y-(%m-%B)-(%d-%A) %H:%M')"
+	git commit -m "$(date -u +'%Y-\(%m-%B\)-\(%d-%A\) %H:%M')"
 	git push origin nixos
 	sudo nixos-rebuild --impure switch --flake .#vch
 
