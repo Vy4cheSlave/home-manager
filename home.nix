@@ -6,8 +6,10 @@
 
   home = {
     packages = with pkgs; [
-      jetbrains-mono # fonts
+      # fonts #################
+      jetbrains-mono 
       nerd-fonts.jetbrains-mono
+      nerd-fonts
       #########################
       ghostty
       #librewolf
