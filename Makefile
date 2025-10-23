@@ -1,8 +1,7 @@
 .PHONY: update
 update: # правило написаное кровью
-	@GIT_VERSION="$(date -u '+%Y-[%m-%B]-[%d-%A] %H:%M')"
 	git add .
-	git commit -m "$GIT_VERSION"
+	@git commit -m "$(shell date -u '+%Y-[%m-%B]-[%d-%A] %H:%M')"
 # 	git push origin nixos
 # 	sudo nixos-rebuild --impure switch --flake .#vch
 
