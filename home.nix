@@ -8,10 +8,9 @@
     packages = with pkgs; [
       # fonts #################
       jetbrains-mono 
-      # nerd-fonts.jetbrains-mono
-      # nerdfonts.nerd-fonts-agave
-      nerd-fonts._0xproto 
-      nerdfonts.nerd-fonts-3270
+      nerd-fonts.jetbrains-mono
+      nerdfonts.nerd-fonts-agave
+      nerd-fonts._3270
       #########################
       ghostty
       #librewolf
