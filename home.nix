@@ -32,7 +32,7 @@
       # eww ###############
       libnotify
       #####################
-    ] ++ builtins.attrValues (builtins.filter lib.attrsets.isDerivation pkgs.nerd-fonts);
+    ] ++ lib.attrValues (builtins.filter lib.attrsets.isDerivation pkgs.nerd-fonts);
 
     username = "vch";
     homeDirectory = "/home/vch";
