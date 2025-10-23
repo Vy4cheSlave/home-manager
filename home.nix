@@ -9,7 +9,8 @@
       # fonts #################
       jetbrains-mono 
       nerd-fonts.jetbrains-mono
-      nerd-fonts
+      nerdfonts.nerd-fonts-agave
+      nerdfonts.nerd-fonts-3270
       #########################
       ghostty
       #librewolf
