@@ -4,6 +4,8 @@
     ./web-browser/librefox.nix 
   ];
 
+  home.packages = builtins.filter lib.attrsets.isDerivation (pkgs.nerd-fonts);
+
   home = {
     packages = with pkgs; [
       # fonts #################
