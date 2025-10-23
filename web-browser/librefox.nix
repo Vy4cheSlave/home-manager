@@ -76,9 +76,15 @@
         # Check about:config for options.
         Preferences = {
           "privacy.resistFingerprinting" = lock-false;
-          "ui.systemUsesDarkTheme" = { Value = 3; Status = "locked"; };
+          "ui.systemUsesDarkTheme" = lock-true;
+          "sidebar.animation.enabled" = lock-false;
+          "sidebar.main.tools" = { Value = "history,syncedtabs,bookmarks"; Status = "locked"; }
+          "sidebar.position_start" = lock-true;
+          "sidebar.revamp" = lock-true;
+          "sidebar.visibility" = { Value = "hide-sidebar"; Status = "locked"; };
           "sidebar.verticalTabs" = lock-true;
           "sidebar.verticalTabs.dragToPinPromo.dismissed" = lock-true;
+          "browser.translations.enable" = lock-false;
           "identity.fxaccounts.enabled" = { Value = true; Status = "locked"; };  # Включение синхронизации
           "browser.startup.page" = { Value = 3; Status = "locked"; }; # 1: новые вкладки, 2: домашняя страница, 3: предыдущие вкладки
           "browser.sessionstore.resume_from_crash" = lock-true; # Восстанавливать предыдущие вкладки после сбоя
