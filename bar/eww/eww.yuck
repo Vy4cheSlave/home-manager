@@ -57,9 +57,15 @@
     (box
         :class "box_test"
         :orientation "h"
-        (label
+        (box
+            (circular-progress 
+                :thickness 4
+                :value {EWW_BATTERY?.BAT0.capacity}
+            )
+            (label
             ; :class "text_test"
             :text "| 🌯: ${EWW_BATTERY?.BAT0.capacity} |"
+        )
         )
     )
 )
@@ -70,27 +76,34 @@
         :class "box_test"
         (box
             :class "box_test"
-            used_workspace
-        )
-        (box
-            :class "box_test"
-            current_workspace
+            ; used_workspace
+            ; count_open_workspaces
+            (workspace-monitor)
         )
     )
 )
-(deflisten used_workspace 
-    :initial "test"
-    "scripts/workspace used"
+(defpoll count_open_workspaces 
+    :initial "[]"
+    :interval "250ms";"1s"
+    ; ::run-while {current_workspace.WorkspaceActivated == null}
+    ; "niri msg -j workspaces | jq -c 'sort_by(.idx)'"
+    `scripts/workspace.sh`
 )
-(deflisten current_workspace 
-    :initial "test"
-    "scripts/workspace current"
+(defwidget workspace-monitor []
+    (box 
+        (for entry in count_open_workspaces
+            (box
+                :class {entry.is_active ? "box_test" : ""}
+                {entry.idx}
+            )
+        )
+    )
 )
 
 ; clock widget ;;
 (defwidget clock []
 	(box
-        ; :class "box_test"
+        :class "box_test"
         :orientation "h"
         :spacing 0
         :space-evenly false
