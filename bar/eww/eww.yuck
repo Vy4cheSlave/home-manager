@@ -48,7 +48,9 @@
     (box
         :class "box_test"
         :orientation "h"
+        (box :class "box_test")
         (clock)
+        (box :class "box_test")
     )
 )
 
@@ -63,7 +65,7 @@
                 :value {EWW_BATTERY?.BAT0.capacity}
             )
             (label
-            ; :class "text_test"
+            :class "text_test"
             :text "| 🌯: ${EWW_BATTERY?.BAT0.capacity} |"
         )
         )
@@ -80,8 +82,10 @@
         (for entry in count_open_workspaces
             (box
                 :class {entry.is_active ? "box_test" : ""}
-
-                {entry.idx}
+                (label
+                    :class "text_test"
+                    :text {entry?.active_window_id != "null" ? entry.idx : "+"}
+                )
             )
         )
     )
