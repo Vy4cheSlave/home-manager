@@ -74,30 +74,22 @@
 (defwidget workspaces []
 	(box
         :class "box_test"
-        (box
-            :class "box_test"
-            ; used_workspace
-            ; count_open_workspaces
-            (workspace-monitor)
+        :orientation "h"
+        :space-evenly false
+        :halign "start"
+        (for entry in count_open_workspaces
+            (box
+                :class {entry.is_active ? "box_test" : ""}
+
+                {entry.idx}
+            )
         )
     )
 )
 (defpoll count_open_workspaces 
     :initial "[]"
-    :interval "250ms";"1s"
-    ; ::run-while {current_workspace.WorkspaceActivated == null}
-    ; "niri msg -j workspaces | jq -c 'sort_by(.idx)'"
+    :interval "250ms";
     `scripts/workspace.sh`
-)
-(defwidget workspace-monitor []
-    (box 
-        (for entry in count_open_workspaces
-            (box
-                :class {entry.is_active ? "box_test" : ""}
-                {entry.idx}
-            )
-        )
-    )
 )
 
 ; clock widget ;;
@@ -105,7 +97,6 @@
 	(box
         :class "box_test"
         :orientation "h"
-        :spacing 0
         :space-evenly false
         :halign "center"
         (box
