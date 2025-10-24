@@ -1,4 +1,12 @@
 ; rm -rf ~/.config/eww/ && cp -rf ~/nixos/bar/eww ~/.config/eww && eww open bar --restart
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;						   Variable Section's							 ;;	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;							Window Section's							 ;;	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; bar window ;;
 (defwindow bar
     :monitor 0 ;'[ "0", "<primary>" ]'
     :geometry (geometry 
@@ -7,10 +15,231 @@
         :width "100%"
         :height "4%"
         :anchor "top center"
-        :vexpand false
     )
     :stacking "bottom"
     :exclusive true ; Если true :anchor должен включать в себя center
+    (bar)
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;							Widget Section's							 ;;	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; bar widget ;;
+(defwidget bar []
+    (box
+        :class "box_test"
+        :orientation "h"
+        (top)
+        (mid)
+        (bot)
+    )
+)
+
+;; top widget ;;
+(defwidget top []
+    (box
+        :class "box_test"
+        :orientation "h"
+        (workspaces)
+    )
+)
+;; mid widget ;;
+(defwidget mid []
+    (box
+        :class "box_test"
+        :orientation "h"
+        (clock)
+    )
+)
+
+;; bot widget ;;
+(defwidget bot []
+    (box
+        :class "box_test"
+        :orientation "h"
+        (label
+            ; :class "text_test"
+            :text "| 🌯: ${EWW_BATTERY?.BAT0.capacity} |"
+        )
+    )
+)
+
+;; workspaces widget ;;
+(defwidget workspaces []
+	(box
+        :class "box_test"
+        (box
+            :class "box_test"
+            used_workspace
+        )
+        (box
+            :class "box_test"
+            current_workspace
+        )
+    )
+)
+(deflisten used_workspace 
+    :initial "test"
+    "scripts/workspace used"
+)
+(deflisten current_workspace 
+    :initial "test"
+    "scripts/workspace current"
+)
+
+; clock widget ;;
+(defwidget clock []
+	(box
+        ; :class "box_test"
+        :orientation "h"
+        :spacing 0
+        :space-evenly false
+        :halign "center"
+        (box
+            ; :class "box_test"
+            :halign "end"
+            (label
+                :class "text_test"
+                :text clock_hour
+            )
+        )
+        (box
+            ; :class "box_test"
+            :halign "center"
+            :valign "center"
+            (label
+                :class "text_test"
+                :text ":"
+            )
+        )
+        (box
+            ; :class "box_test"
+            :halign "start"
+            (label
+                :class "text_test"
+                :text clock_minute
+            )
+        )
+    )
+)
+(defpoll clock_hour :interval "5s" "date +\%I")
+(defpoll clock_minute :interval "5s" "date +\%M")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; test ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defwidget bar_test []
     (centerbox
         :orientation "h"
         :class "outline"
