@@ -130,7 +130,7 @@
         )
     )
 )
-(defpoll clock_hour :interval "5s" "date +\%I")
+(defpoll clock_hour :interval "5s" "date +%H")
 (defpoll clock_minute :interval "5s" "date +\%M")
 
 
