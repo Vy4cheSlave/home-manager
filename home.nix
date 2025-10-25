@@ -48,6 +48,9 @@
     enable = true;
     vaults.obsidian.target = "obsidian";
   };
+  programs.obsidian-export = {
+    enable = true;
+  };
   programs.zsh = {
     enable = true;
   };
