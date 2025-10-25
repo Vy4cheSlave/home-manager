@@ -21,7 +21,7 @@
       nekoray
       btop
       nautilus
-      flatpak
+      # flatpak
       #rofi
       # не разобрался как работает пока
       # zapret
@@ -87,8 +87,11 @@
   };
   #####################################################################################################
   # flatpak############################################################################################
-  home.sessionVariables = {
-    XDG_DATA_DIRS = lib.mkForce  "$XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share";
+  services.flatpak = {
+    enable = true;
+    packages = [
+      "md.obsidian.Obsidian"
+    ];
   };
   #####################################################################################################
 }

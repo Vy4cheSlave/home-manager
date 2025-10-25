@@ -5,6 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     niri.url = "github:sodiboo/niri-flake";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -29,6 +30,7 @@
             (import ./local.nix)
 
             inputs.niri.nixosModules.niri
+            inputs.nix-flatpak.nixosModules.nix-flatpak
             
             inputs.home-manager.nixosModules.home-manager {
               home-manager = {
