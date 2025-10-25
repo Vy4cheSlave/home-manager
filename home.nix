@@ -100,12 +100,5 @@
       "$HOME/.local/share/flatpak/exports/share"
     ];
   };
-  programs.flatpak = {
-    enable = true;
-    packages = [
-      "md.obsidian.Obsidian"
-      "com.usebottles.bottles"
-    ];
-  };
   #####################################################################################################
 }

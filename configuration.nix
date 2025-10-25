@@ -117,13 +117,13 @@
   #     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   #   '';
   # };
-  # services.flatpak = {
-  #   enable = true;
-  #   packages = [
-  #     "md.obsidian.Obsidian"
-  #     "com.usebottles.bottles"
-  #   ];
-  # };
+  services.flatpak = {
+    enable = true;
+    packages = [
+      "md.obsidian.Obsidian"
+      "com.usebottles.bottles"
+    ];
+  };
   # environment.variables = {
   #   XDG_DATA_DIRS = lib.mkDefault [
   #     "/var/lib/flatpak/exports/share"
@@ -153,8 +153,6 @@
 
   # Включите свободные пакеты, так как драйвер NVIDIA — проприетарный
   nixpkgs.config.allowUnfree = true;
-
-  services.flatpak.enable = true;
 ####################################################################
 
   # Enable touchpad support (enabled default in most desktopManager).
