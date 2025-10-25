@@ -124,6 +124,12 @@
       "md.obsidian.Obsidian"
     ];
   };
+  environment.variables = {
+    XDG_DATA_DIRS = [
+      "/var/lib/flatpak/exports/share"
+      "/home/${config.home.username}/.local/share/flatpak/exports/share"
+    ];
+  };
 ####################################################################
 
   # Enable touchpad support (enabled default in most desktopManager).
