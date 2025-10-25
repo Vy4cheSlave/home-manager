@@ -155,9 +155,6 @@
 
   # Добавляем 32-битные библиотеки, которые нужны для Wine/Bottles
   hardware.opengl.driSupport32Bit = true;
-
-  # Включите свободные пакеты, так как драйвер NVIDIA — проприетарный
-  nixpkgs.config.allowUnfree = true;
 ####################################################################
 
   # Enable touchpad support (enabled default in most desktopManager).
