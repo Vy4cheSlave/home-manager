@@ -195,6 +195,10 @@
     open = false; # Или false, в зависимости от вашей карты
     # Включение prime offloading
     prime = {
+      offload = {
+        enable = true;
+        enableOffloadCmd = true;
+      };
       # Bus ID интегрированной графики Intel
       intelBusId = "PCI:0:2:0";
       # Bus ID дискретной графики NVIDIA
@@ -206,9 +210,10 @@
   };
 
   # Включение драйверов NVIDIA для X-сервера
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = [ "modesetting" "nvidia" ];
 
   # Добавляем 32-битные библиотеки, которые нужны для Wine/Bottles
+  hardware.graphics.enable = true;
   hardware.graphics.enable32Bit = true;
 ####################################################################
 
