@@ -41,6 +41,9 @@
     stateVersion = "25.05";
   };
 
+  programs.yazi = {
+    enable = true;
+  };
   programs.obsidian = {
     enable = true;
     # я ебал этого пидараса

@@ -41,6 +41,7 @@
         :class "box_test"
         :orientation "h"
         (workspaces)
+        (box)
     )
 )
 ;; mid widget ;;
