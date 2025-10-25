@@ -140,9 +140,19 @@
   hardware.nvidia = {
     enable = true;
     modesetting.enable = true;
+    # Используйте 'true' для открытых модулей (новые карты) или 'false' для проприетарных (старые).
+    # Проверьте документацию NVIDIA или вики NixOS для своей карты.
+    open = true;
   };
-  hardware.opengl.driSupport32Bit = true;
+
+  # Включение драйверов NVIDIA для X-сервера
   services.xserver.videoDrivers = [ "nvidia" ];
+
+  # Добавляем 32-битные библиотеки, которые нужны для Wine/Bottles
+  hardware.opengl.driSupport32Bit = true;
+
+  # Включите свободные пакеты, так как драйвер NVIDIA — проприетарный
+  nixpkgs.config.allowUnfree = true;
 ####################################################################
 
   # Enable touchpad support (enabled default in most desktopManager).
