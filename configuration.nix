@@ -121,6 +121,7 @@
     enable = true;
     packages = [
       "md.obsidian.Obsidian"
+      "com.usebottles.bottles"
     ];
   };
   # environment.variables = {
