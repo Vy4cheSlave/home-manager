@@ -55,7 +55,7 @@
   };
 
   # Enable the X11 windowing system.
-  #services.xserver.enable = true;
+  services.xserver.enable = true;
   #services.xserver = {
   #  displayManager.sessionCommands = ''
   #    xset r rate 200 35 &
@@ -136,8 +136,6 @@
       # xdg-desktop-portal-gtk
     ];
   };
-  services.xserver.enable = true;
-  services.xserver.xwayland.enable = true;
 ####################################################################
 
   # Enable touchpad support (enabled default in most desktopManager).
