@@ -18,7 +18,6 @@
       git
       gnumake
       vscodium
-      obsidian-export
       nekoray
       btop
       #rofi
@@ -46,7 +45,18 @@
   };
   programs.obsidian = {
     enable = true;
-    vaults.obsidian.target = "obsidian";
+    vaults.obsidian = {
+      enable = false;
+      target = "obsidian";
+      settings = {
+        extraFiles = {
+          ".obsidian" = {
+            source = ~/obsidian/.obsidian;
+            target = ".obsidian";
+          };
+        };
+      };
+    };
   };
   programs.zsh = {
     enable = true;
