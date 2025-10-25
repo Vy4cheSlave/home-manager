@@ -62,7 +62,6 @@
   #  '';
   #};
 
-
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   # services.xserver.desktopManager.gnome.enable = true;
@@ -137,6 +136,8 @@
       # xdg-desktop-portal-gtk
     ];
   };
+  services.xserver.enable = true;
+  services.xserver.xwayland.enable = true;
 ####################################################################
 
   # Enable touchpad support (enabled default in most desktopManager).
