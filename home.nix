@@ -100,5 +100,12 @@
       "$HOME/.local/share/flatpak/exports/share"
     ];
   };
+  services.flatpak = {
+    enable = true;
+    packages = [
+      "md.obsidian.Obsidian"
+      "com.usebottles.bottles"
+    ];
+  };
   #####################################################################################################
 }

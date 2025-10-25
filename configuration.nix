@@ -117,13 +117,13 @@
   #     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   #   '';
   # };
-  services.flatpak = {
-    enable = true;
-    packages = [
-      "md.obsidian.Obsidian"
-      "com.usebottles.bottles"
-    ];
-  };
+  # services.flatpak = {
+  #   enable = true;
+  #   packages = [
+  #     "md.obsidian.Obsidian"
+  #     "com.usebottles.bottles"
+  #   ];
+  # };
   # environment.variables = {
   #   XDG_DATA_DIRS = lib.mkDefault [
   #     "/var/lib/flatpak/exports/share"
@@ -137,6 +137,12 @@
       # xdg-desktop-portal-gtk
     ];
   };
+  hardware.nvidia = {
+    enable = true;
+    modesetting.enable = true;
+  };
+  hardware.opengl.driSupport32Bit = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
 ####################################################################
 
   # Enable touchpad support (enabled default in most desktopManager).
