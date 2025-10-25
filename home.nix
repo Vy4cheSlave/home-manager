@@ -33,6 +33,7 @@
       libnotify
       jq
       #####################
+      lspci
     ];
 
     username = "vch";
