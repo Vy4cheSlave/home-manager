@@ -121,7 +121,15 @@
   services.flatpak = {
     enable = true;
     packages = [
-      "md.obsidian.Obsidian"
+      {
+      id = "md.obsidian.Obsidian";
+      overrides = {
+        Context = {
+          sockets = [ "wayland" ];
+        };
+      };
+      }
+      # "md.obsidian.Obsidian"
     ];
   };
   # environment.variables = {
