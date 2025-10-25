@@ -133,6 +133,23 @@
         };
       };
 
+      "md.obsidian.Obsidian".Context = {
+        filesystems = [
+          "/run/current-system/sw/bin:ro"
+          "xdg-config/git:ro"
+        ];
+      };
+      "com.usebottles.bottles".Context = {
+        # Явно указываем, что Bottles должен использовать NVIDIA GPU
+        # Это может помочь в гибридных системах
+        Environment = {
+          DRI_PRIME = "1";
+        };
+        # Дополнительно можно добавить сокет X11 на всякий случай
+        # Это не должно быть нужно, если вы в Wayland, но иногда помогает
+        # sockets = [ "x11" ];
+      };
+
       # "com.visualstudio.code".Context = {
       #   filesystems = [
       #     "xdg-config/git:ro" # Expose user Git config
@@ -143,7 +160,7 @@
       #     "pcsc" # Expose smart cards (i.e. YubiKey)
       #   ];
       # };
-      "org.onlyoffice.desktopeditors".Context.sockets = ["x11"]; # No Wayland support
+      # "org.onlyoffice.desktopeditors".Context.sockets = ["x11"]; # No Wayland support
     };
   };
   xdg.portal = {
