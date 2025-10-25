@@ -153,6 +153,8 @@
 
   # Включите свободные пакеты, так как драйвер NVIDIA — проприетарный
   nixpkgs.config.allowUnfree = true;
+
+  services.flatpak.enable = true;
 ####################################################################
 
   # Enable touchpad support (enabled default in most desktopManager).

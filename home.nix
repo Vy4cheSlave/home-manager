@@ -100,7 +100,7 @@
       "$HOME/.local/share/flatpak/exports/share"
     ];
   };
-  services.flatpak = {
+  programs.flatpak = {
     enable = true;
     packages = [
       "md.obsidian.Obsidian"
