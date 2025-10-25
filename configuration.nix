@@ -109,8 +109,6 @@
   services.blueman.enable = true;
 ####################################################################
 ### Flatpak ########################################################
-  # Устанавливаем Git на системном уровне
-  environment.systemPackages = [ pkgs.git ];
   services.flatpak = {
     enable = true;
     packages = [
@@ -169,8 +167,20 @@
     enable = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal-wlr
-      # xdg-desktop-portal-gtk
+      xdg-desktop-portal-gtk
     ];
+    config = {
+      niri = {
+        default = [ "wlr" "gtk" ]; # Использовать wlr как основной, gtk как запасной
+      };
+      # Настройки по умолчанию
+      common = {
+        default = [ "wlr" "gtk" ];
+      };
+    };
+  };
+  environment.sessionVariables = {
+    XDG_CURRENT_DESKTOP = "niri";
   };
   hardware.nvidia = {
     # Включение modesetting обязательно для работы
@@ -211,6 +221,8 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-wlr
   ];
   
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
