@@ -64,8 +64,8 @@
   };
   programs.git = {
     enable = true;
-    userName = "Vy4cheSlave";
-    userEmail = "slav.subocheff@yandex.ru";
+    settings.user.name = "Vy4cheSlave";
+    settings.user.email = "slav.subocheff@yandex.ru";
   };
 
   targets.genericLinux.enable = true; # ENABLE THIS ON NON NIXOS
