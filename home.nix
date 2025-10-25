@@ -45,21 +45,21 @@
   programs.yazi = {
     enable = true;
   };
-  programs.obsidian = {
-    enable = true;
-    vaults.obsidian = {
-      enable = false;
-      target = "obsidian";
-      settings = {
-        extraFiles = {
-          ".obsidian" = {
-            source = ~/obsidian/.obsidian;
-            target = ".obsidian";
-          };
-        };
-      };
-    };
-  };
+  # programs.obsidian = {
+  #   enable = true;
+  #   vaults.obsidian = {
+  #     enable = false;
+  #     target = "obsidian";
+  #     settings = {
+  #       extraFiles = {
+  #         ".obsidian" = {
+  #           source = ~/obsidian/.obsidian;
+  #           target = ".obsidian";
+  #         };
+  #       };
+  #     };
+  #   };
+  # };
   programs.zsh = {
     enable = true;
   };

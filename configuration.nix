@@ -118,7 +118,7 @@
   #     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   #   '';
   # };
-   services.flatpak = {
+  services.flatpak = {
     enable = true;
     packages = [
       "md.obsidian.Obsidian"
