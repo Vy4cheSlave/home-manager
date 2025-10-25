@@ -21,6 +21,7 @@
       nekoray
       btop
       nautilus
+      flatpak
       #rofi
       # не разобрался как работает пока
       # zapret
