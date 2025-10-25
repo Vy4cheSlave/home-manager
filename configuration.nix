@@ -125,7 +125,7 @@
     ];
   };
   environment.variables = {
-    XDG_DATA_DIRS = [
+    XDG_DATA_DIRS = lib.mkDefault [
       "/var/lib/flatpak/exports/share"
       "${config.users.users.vch.home}/.local/share/flatpak/exports/share"
     ];
