@@ -20,7 +20,7 @@
       vscodium
       nekoray
       btop
-      dolphin
+      nautilus
       #rofi
       # не разобрался как работает пока
       # zapret
