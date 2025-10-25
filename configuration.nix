@@ -117,13 +117,24 @@
   #     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   #   '';
   # };
-  services.flatpak = {
-    enable = true;
-    packages = [
-      "md.obsidian.Obsidian"
-      "com.usebottles.bottles"
-    ];
+  # test ################
+  # services.flatpak = {
+  #   enable = true;
+  #   packages = [
+  #     "md.obsidian.Obsidian"
+  #     "com.usebottles.bottles"
+  #   ];
+  # };
+  # test 2 ##############
+  services.flatpak.enable = true;
+  systemd.services.flatpak-repo = {
+    wantedBy = [ "multi-user.target" ];
+    path = [ pkgs.flatpak ];
+    script = ''
+      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    '';
   };
+  #######################
   # environment.variables = {
   #   XDG_DATA_DIRS = lib.mkDefault [
   #     "/var/lib/flatpak/exports/share"

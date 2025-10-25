@@ -21,7 +21,6 @@
       nekoray
       btop
       nautilus
-      # flatpak
       #rofi
       # не разобрался как работает пока
       # zapret
@@ -33,6 +32,10 @@
       # eww ###############
       libnotify
       jq
+      #####################
+      # flatpak ###########
+      # flatpak
+      # gnome-software
       #####################
     ];
 
