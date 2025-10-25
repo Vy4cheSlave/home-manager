@@ -127,7 +127,7 @@
   environment.variables = {
     XDG_DATA_DIRS = [
       "/var/lib/flatpak/exports/share"
-      "/home/${config.home.username}/.local/share/flatpak/exports/share"
+      "${config.users.users.vch.home}/.local/share/flatpak/exports/share"
     ];
   };
 ####################################################################
