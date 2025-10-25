@@ -34,7 +34,6 @@
       jq
       #####################
       pciutils
-      prime-run
     ];
 
     username = "vch";
