@@ -138,7 +138,7 @@
     ];
   };
   hardware.nvidia = {
-    enable = true;
+    # enable = true;
     modesetting.enable = true;
     # Используйте 'true' для открытых модулей (новые карты) или 'false' для проприетарных (старые).
     # Проверьте документацию NVIDIA или вики NixOS для своей карты.
