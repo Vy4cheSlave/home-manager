@@ -130,6 +130,13 @@
   #     "${config.users.users.vch.home}/.local/share/flatpak/exports/share"
   #   ];
   # };
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-wlr
+      xdg-desktop-portal-gtk
+    ];
+  };
 ####################################################################
 
   # Enable touchpad support (enabled default in most desktopManager).
