@@ -46,8 +46,7 @@
   };
   programs.obsidian = {
     enable = true;
-    # я ебал этого пидараса
-    #vaults.obsidian.target = "documents/obsidian";
+    vaults.obsidian.target = "obsidian";
   };
   programs.zsh = {
     enable = true;
