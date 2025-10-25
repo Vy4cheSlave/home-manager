@@ -109,6 +109,8 @@
   services.blueman.enable = true;
 ####################################################################
 ### Flatpak ########################################################
+  # Устанавливаем Git на системном уровне
+  environment.systemPackages = [ pkgs.git ];
   services.flatpak = {
     enable = true;
     packages = [
