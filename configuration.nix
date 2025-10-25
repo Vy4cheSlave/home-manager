@@ -192,7 +192,14 @@
     # Выбор между открытыми и проприетарными модулями ядра
     # Используйте 'true' для современных карт (RTX 20 и новее)
     # Используйте 'false' для старых карт (GTX 10 и старше)
-    open = true; # Или false, в зависимости от вашей карты
+    open = false; # Или false, в зависимости от вашей карты
+    # Включение prime offloading
+    prime = {
+      # Bus ID интегрированной графики Intel
+      intelBusId = "PCI:0:2:0";
+      # Bus ID дискретной графики NVIDIA
+      nvidiaBusId = "PCI:1:0:0";
+    };
 
     # Необязательная опция: включение утилиты nvidia-settings
     nvidiaSettings = true;
