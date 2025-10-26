@@ -35,7 +35,7 @@
       #####################
       pciutils
       #####################
-      steam
+      protonup
     ];
 
     username = "vch";
@@ -46,6 +46,16 @@
 
   programs.yazi = {
     enable = true;
+  };
+  programs.steam = {
+    # settings->general->launch options->
+    # gamemoderun %command% / gamescope %command%
+    enable = true;
+    gamescopeSession.enable = true; # проблемы с масштабированием
+    gamemode.enable = true; # улучшение производительности
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
   # programs.obsidian = {
   #   enable = true;

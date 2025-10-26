@@ -109,6 +109,7 @@
   services.blueman.enable = true;
 ####################################################################
 ### Flatpak ########################################################
+### Лучше вручную ничего не удалять, только через конфиг ###########
   services.flatpak = {
     enable = true;
     packages = [
@@ -200,7 +201,7 @@
     open = false; # Или false, в зависимости от вашей карты
     # Включение prime offloading
     prime = {
-      offload = {
+      offload = { # использование видеокарты nvidia nvidia-offload %some-game%
         enable = true;
         enableOffloadCmd = true;
       };
