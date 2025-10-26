@@ -109,6 +109,7 @@
   services.blueman.enable = true;
 ####################################################################
 ### Steam ##########################################################
+programs.xwayland.enable = true;
 programs.gamemode.enable = true; # улучшение производительности
 programs.steam = {
   # settings->general->launch options->
