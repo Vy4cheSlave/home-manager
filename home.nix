@@ -19,7 +19,6 @@
       gnumake
       vscodium
       nekoray
-      btop
       nautilus
       #rofi
       # не разобрался как работает пока
@@ -45,6 +44,11 @@
     stateVersion = "25.05";
   };
 
+  programs.btop = {
+    enable = true;
+    themes = .conf/btop/themes
+    xdg.configFile."btop/btop.conf".source = .conf/btop/btop.conf;
+  };
   programs.yazi = {
     enable = true;
   };
@@ -75,7 +79,7 @@
   targets.genericLinux.enable = true; # ENABLE THIS ON NON NIXOS
   programs.home-manager.enable = true;
   # niri ##############################################################################################
-  xdg.configFile."niri/config.kdl".source = ./niri/config.kdl;
+  xdg.configFile."niri/config.kdl".source = .conf/wm/niri/config.kdl;
 
   programs.fuzzel.enable = true; # Super+D in the default setting (app launcher)
   programs.swaylock.enable = true; # Super+Alt+L in the default setting (screen locker)
