@@ -89,7 +89,7 @@
   targets.genericLinux.enable = true; # ENABLE THIS ON NON NIXOS
   programs.home-manager.enable = true;
   # niri ##############################################################################################
-  xdg.configFile."niri/config.kdl".source = .conf/wm/niri/config.kdl;
+  xdg.configFile."niri/config.kdl".source = ./conf/wm/niri/config.kdl;
 
   programs.fuzzel.enable = true; # Super+D in the default setting (app launcher)
   programs.swaylock.enable = true; # Super+Alt+L in the default setting (screen locker)
