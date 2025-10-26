@@ -137,12 +137,12 @@
       "md.obsidian.Obsidian".Context = {
         filesystems = [
           # "xdg-config/git/config:ro"
+          "/home/vch/.config/git:ro"
           "/run/current-system/sw/bin:ro"
         ];
         Environment = [
           "GIT_CONFIG_GLOBAL=/home/vch/.config/git/config"
         ];
-        # Environment = [ "PATH=/usr/bin:/bin:/app/bin:/var/run/host/usr/bin:/home/vch/.nix-profile/bin" ];
       };
       "com.usebottles.bottles".Context = {
         # Явно указываем, что Bottles должен использовать NVIDIA GPU
