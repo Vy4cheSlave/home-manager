@@ -53,8 +53,8 @@
     # settings = {
     #   color_theme = "catppuccin_mocha";
     # };
-    
-    extraConfig = ./conf/btop/btop.conf;
+
+    extraConfig = builtins.readFile ./conf/btop/btop.conf;
   };
   programs.yazi = {
     enable = true;
