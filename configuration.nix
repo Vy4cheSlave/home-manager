@@ -68,6 +68,7 @@
 ### Niri WM ###################################################
   programs.niri = {
     enable = true;
+    settings.xwayland-satellite.enable = true;
   };
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 ###############################################################
