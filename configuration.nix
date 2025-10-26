@@ -111,6 +111,7 @@
 ####################################################################
 ### Steam ##########################################################
 programs.xwayland.enable = true;
+services.xserver.xwayland.enable = true;
 programs.gamemode.enable = true; # улучшение производительности
 programs.steam = {
   # settings->general->launch options->
@@ -258,8 +259,6 @@ programs.steam = {
     wget
     xdg-desktop-portal-gtk
     xdg-desktop-portal-wlr
-    # bottles
-    xorg.xwayland
   ];
   
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
