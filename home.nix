@@ -48,7 +48,7 @@
   programs.btop = {
     enable = true;
     themes = {
-      catppuccin_mocha = /path/to/your/catppuccin_mocha.theme;
+      catppuccin_mocha = builtins.readFile /path/to/your/catppuccin_mocha.theme;
     };
     settings = .conf/btop;
   };
