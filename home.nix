@@ -48,11 +48,10 @@
   programs.btop = {
     enable = true;
     themes = {
-      catppuccin_mocha = builtins.readFile ./conf/btop/themes/catppuccin_mocha.theme;
+      catppuccin_mocha = ./conf/btop/themes/catppuccin_mocha.theme; # builtins.readFile
     };
     settings = {
-      # color_theme = "catppuccin_mocha";
-      builtins.readFile ./conf/btop/btop.conf;
+      color_theme = "catppuccin_mocha";
     };
   };
   programs.yazi = {
