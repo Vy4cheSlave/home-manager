@@ -51,12 +51,8 @@
       catppuccin_mocha = builtins.readFile ./conf/btop/themes/catppuccin_mocha.theme;
     };
     settings = {
-      # Примеры корректных настроек
-      color_theme = "catppuccin_mocha";
-      # update_ms = 2000;
-      # proc_sorting = "cpu lazy";
-      # show_cpu_freq = true;
-      # show_cpu_temp = true;
+      # color_theme = "catppuccin_mocha";
+      builtins.readFile ./conf/btop/btop.conf;
     };
   };
   programs.yazi = {
