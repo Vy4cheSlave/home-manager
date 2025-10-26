@@ -114,6 +114,7 @@
     packages = [
       "md.obsidian.Obsidian"
       "com.usebottles.bottles"
+      "com.github.tchx84.Flatseal"
     ];
     update.auto = {
       enable = true;
