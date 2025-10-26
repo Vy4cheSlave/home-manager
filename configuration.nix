@@ -142,7 +142,7 @@
           "/run/current-system/sw/bin:ro"
         ];
         Environment = [
-          "GIT_CONFIG_GLOBAL=/home/vch/.config/git/config"
+          # "GIT_CONFIG_GLOBAL=/home/vch/.config/git/config"
         ];
       };
       "com.usebottles.bottles".Context = {
