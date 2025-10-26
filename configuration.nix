@@ -138,6 +138,7 @@
         filesystems = [
           # "xdg-config/git:ro"
           "/home/vch/.config/git/config:ro"
+          "~/.config/git/config:ro"
           "/run/current-system/sw/bin:ro"
         ];
         Environment = [ "PATH=/usr/bin:/bin:/app/bin:/var/run/host/usr/bin:/home/vch/.nix-profile/bin" ];
