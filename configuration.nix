@@ -68,6 +68,7 @@
 ### Niri WM ###################################################
   programs.niri = {
     enable = true;
+    xwayland.enable = true;
   };
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 ###############################################################
@@ -257,7 +258,8 @@ programs.steam = {
     wget
     xdg-desktop-portal-gtk
     xdg-desktop-portal-wlr
-    bottles
+    # bottles
+    xorg.xwayland
   ];
   
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
