@@ -135,7 +135,8 @@
 
       "md.obsidian.Obsidian".Context = {
         filesystems = [
-          "/run/current-system/sw/bin:ro"
+          # "/run/current-system/sw/bin:ro"
+          "~/.nix-profile/bin:ro"
           "xdg-config/git:ro"
         ];
       };
