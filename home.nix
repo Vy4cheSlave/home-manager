@@ -1,7 +1,7 @@
 { lib, pkgs, ... }:
 {
   imports = [ 
-    ./web-browser/librefox.nix 
+    ./conf/web-browser/librefox.nix 
   ];
 
   home = {
