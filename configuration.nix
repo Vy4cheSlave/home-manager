@@ -134,7 +134,7 @@
         };
       };
 
-      # НЕ РАБОТАЕТ (НАСТРАИВАЙ ВРУЧНУЮ)
+      # НЕ РАБОТАЕТ(или работает я хуй знает) (НАСТРАИВАЙ ВРУЧНУЮ)
       "md.obsidian.Obsidian".Context = {
         filesystems = [
           "xdg-config/git/config:ro"
