@@ -68,7 +68,7 @@
 ### Niri WM ###################################################
   programs.niri = {
     enable = true;
-    settings.xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite-unstable;
+    settings.xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
   };
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 ###############################################################
