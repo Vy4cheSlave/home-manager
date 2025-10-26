@@ -47,7 +47,9 @@
   # xdg.configFile."btop/btop.conf".source = .conf/btop/btop.conf;
   programs.btop = {
     enable = true;
-    themes = .conf/btop/themes/catppuccin_mocha.theme;
+    themes = {
+      catppuccin_mocha = /path/to/your/catppuccin_mocha.theme;
+    };
     settings = .conf/btop;
   };
   programs.yazi = {
