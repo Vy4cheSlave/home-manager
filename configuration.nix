@@ -139,7 +139,7 @@
           "~/.nix-profile/bin:ro"
           "xdg-config/git:ro"
         ];
-        Environment = [ "PATH=/usr/bin:/bin:/app/bin:/var/run/host/usr/bin:/home/yourusername/.nix-profile/bin" ];
+        Environment = [ "PATH=/usr/bin:/bin:/app/bin:/var/run/host/usr/bin:/home/vch/.nix-profile/bin" ];
       };
       "com.usebottles.bottles".Context = {
         # Явно указываем, что Bottles должен использовать NVIDIA GPU
