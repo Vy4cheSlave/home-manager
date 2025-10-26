@@ -137,7 +137,7 @@
       # НЕ РАБОТАЕТ (НАСТРАИВАЙ ВРУЧНУЮ)
       "md.obsidian.Obsidian".Context = {
         filesystems = [
-          # "xdg-config/git/config:ro"
+          "xdg-config/git/config:ro"
           # "/home/vch/.config/git:ro"
           "/run/current-system/sw/bin:ro"
         ];
