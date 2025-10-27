@@ -46,7 +46,7 @@
 
   services.swww = {
     enable = true;
-  }
+  };
   programs.btop = {
     enable = true;
     themes = {
