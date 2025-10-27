@@ -27,7 +27,6 @@
 
       # niri ##############
       swaybg
-      swww
       #####################
       # eww ###############
       libnotify
@@ -45,7 +44,9 @@
     stateVersion = "25.05";
   };
 
-  # xdg.configFile."btop/btop.conf".source = .conf/btop/btop.conf;
+  services.swww = {
+    enable = true;
+  }
   programs.btop = {
     enable = true;
     themes = {
