@@ -197,6 +197,8 @@ layout {
         // If you enable the border, you probably want to disable the focus ring.
         off
 
+        opacity 0.8
+
         width 4
         active-color "#f5c2e7"
         inactive-color "#45475a"
@@ -351,20 +353,8 @@ window-rule {
 // opacity 
 window-rule {
     // match is-active=true
-    opacity 0.90
+    opacity 0.80
 }
-//window-rule {
-//    match is-active=false
-//    opacity 0.90
-//}
-//window-rule {
-//    match is-floating=true is-active=true
-//    opacity 0.90
-//}
-//window-rule {
-//    match is-floating=true is-active=false
-//    opacity 0.90
-//}
 
 
 binds {
