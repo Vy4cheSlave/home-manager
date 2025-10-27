@@ -353,7 +353,7 @@ window-rule {
 // opacity 
 window-rule {
     // match is-active=true
-    opacity 0.80
+    opacity 0.85
 }
 
 
