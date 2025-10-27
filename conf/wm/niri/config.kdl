@@ -270,6 +270,7 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 // spawn-at-startup "waybar"
 spawn-sh-at-startup "eww daemon && eww open bar"
+spawn-at-startup "swww-daemon"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -351,22 +352,18 @@ window-rule {
 window-rule {
     match is-active=true
     opacity 0.90
-    blur
 }
 window-rule {
     match is-active=false
     opacity 0.90
-    blur
 }
 window-rule {
     match is-floating=true is-active=true
     opacity 0.90
-    blur
 }
 window-rule {
     match is-floating=true is-active=false
     opacity 0.90
-    blur
 }
 
 
