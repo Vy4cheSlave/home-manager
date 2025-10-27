@@ -356,6 +356,10 @@ window-rule {
     match is-active=false
     opacity 0.90
 }
+window-rule {
+    match is-floating=true
+    opacity 0.90
+}
 
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
