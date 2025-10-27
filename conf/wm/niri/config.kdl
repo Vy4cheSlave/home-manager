@@ -347,10 +347,14 @@ window-rule {
     clip-to-geometry true
 }
 
-// opacity for all windows
+// opacity 
 window-rule {
-    active-opacity 0.85
-    inactive-opacity 0.7
+    match is-active=true
+    opacity 0.85
+}
+window-rule {
+    match is-active=false
+    opacity 0.7
 }
 
 binds {
