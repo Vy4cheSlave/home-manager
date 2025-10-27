@@ -246,7 +246,7 @@ layout {
         offset x=0 y=5
 
         // You can also change the shadow color and opacity.
-        color "#0007"
+        color "#11111b80"
     }
 
     // Struts shrink the area occupied by windows, similarly to layer-shell panels.
@@ -345,6 +345,12 @@ window-rule {
 window-rule {
     geometry-corner-radius 8
     clip-to-geometry true
+}
+
+// opacity for all windows
+window-rule {
+    active-opacity 0.85
+    inactive-opacity 0.7
 }
 
 binds {
