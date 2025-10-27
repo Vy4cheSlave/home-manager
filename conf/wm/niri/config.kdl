@@ -350,11 +350,11 @@ window-rule {
 // opacity 
 window-rule {
     match is-active=true
-    opacity 0.85
+    opacity 0.90
 }
 window-rule {
     match is-active=false
-    opacity 0.7
+    opacity 0.90
 }
 
 binds {
