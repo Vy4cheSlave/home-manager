@@ -157,7 +157,6 @@ layout {
     focus-ring {
         // Uncomment this line to disable the focus ring.
         // off
-        off
 
         // How many logical pixels the ring extends out from the windows.
         width 4
@@ -168,14 +167,14 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        // #89b4fae6 - 90% #89b4facc - 80%
-        active-color "#89b4fa"
+        // #89b4fae6 - 90% #89b4facc - 80% #89b4fa80 - 50%
+        active-color "#89b4fa80"
 
         // Color of the ring on inactive monitors.
         //
         // The focus ring only draws around the active window, so the only place
         // where you can see its inactive-color is on other monitors.
-        inactive-color "#585b70"
+        inactive-color "#585b7080"
 
         // You can also use gradients. They take precedence over solid colors.
         // Gradients are rendered the same as CSS linear-gradient(angle, from, to).
@@ -184,20 +183,20 @@ layout {
         // You can use any CSS linear-gradient tool on the web to set these up.
         // Changing the color space is also supported, check the wiki for more info.
         //
-        active-gradient from="#89b4fa" to="#313244" angle=225
+        active-gradient from="#89b4fa80" to="#31324480" angle=225
 
         // You can also color the gradient relative to the entire view
         // of the workspace, rather than relative to just the window itself.
         // To do that, set relative-to="workspace-view".
         //
-        inactive-gradient from="#45475a" to="#313244" angle=225 relative-to="workspace-view"
+        inactive-gradient from="#45475a80" to="#31324480" angle=225 relative-to="workspace-view"
     }
 
     // You can also add a border. It's similar to the focus ring, but always visible.
     border {
         // The settings are the same as for the focus ring.
         // If you enable the border, you probably want to disable the focus ring.
-        // off
+        off
 
         width 4
         active-color "#89b4fa"
