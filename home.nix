@@ -11,6 +11,7 @@
       nerd-fonts.jetbrains-mono
       nerd-fonts.agave
       nerd-fonts._3270
+      phosphor-icons
       #########################
       ghostty
       #librewolf

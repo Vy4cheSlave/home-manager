@@ -42,6 +42,7 @@
         :orientation "h"
         (workspaces)
         (box)
+        (test_workspaces)
     )
 )
 ;; mid widget ;;
@@ -97,7 +98,7 @@
     `scripts/workspace.sh`
 )
 
-; clock widget ;;
+;; clock widget ;;
 (defwidget clock []
 	(box
         :class "box_test"
@@ -134,9 +135,17 @@
 (defpoll clock_hour :interval "5s" "date +%H")
 (defpoll clock_minute :interval "5s" "date +\%M")
 
+;; test_workspaces ;;
+(test_workspaces
+    :class "box_test"
+    :orientation "h"
+    (box
 
-
-
+    )
+)
+(deflisten
+    
+)
 
 
 
