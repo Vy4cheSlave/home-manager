@@ -1,4 +1,4 @@
-; rm -rf ~/.config/eww/ && cp -rf ~/nixos/bar/eww ~/.config/eww && eww open bar --restart
+; rm -rf ~/.config/eww/ && cp -rf ~/nixos/conf/bar/eww ~/.config/eww && eww open bar --restart
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;						   Variable Section's							 ;;	
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -136,18 +136,28 @@
 (defpoll clock_minute :interval "5s" "date +\%M")
 
 ;; test_workspaces ;;
-(test_workspaces
-    :class "box_test"
-    :orientation "h"
+(defwidget test_workspaces []
     (box
-
+        :class "box_test"
+        :orientation "h"
+        ; {jq(test_listen, ".WorkspaceActivated.id") ? niri msg -j workspaces : niri msg -j workspaces}
+        ; {jq(test_listen, '.WorkspaceActivated.id') != "null" ? 
+        ;             (cmd "niri" "msg" "workspaces") : 
+        ;             "niri msg -j workspaces"}
+        "${test_listen}"
     )
 )
-(deflisten
-    
+(deflisten test_listen
+    ; `niri msg -j event-stream`
+    ; `niri msg -j event-stream | jq -c "
+    ;      if .WorkspaceActivated then 
+    ;          "$(niri msg -j workspaces | jq -c 'sort_by(.idx)')"
+    ;      else 
+    ;          empty 
+    ;      end
+    ;  " --argjson WORKSPACES "$(niri msg -j workspaces | jq -c 'sort_by(.idx)')"`
+    `niri msg -j workspaces | jq -c 'sort_by(.idx)'`
 )
-
-
 
 
 

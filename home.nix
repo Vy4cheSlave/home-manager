@@ -42,6 +42,7 @@
     stateVersion = "25.05";
   };
 
+  fonts.fontconfig.enable = true;
   services.swww = {
     enable = true;
   };
