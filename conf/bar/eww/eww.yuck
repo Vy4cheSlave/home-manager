@@ -144,11 +144,11 @@
         ; {jq(test_listen, '.WorkspaceActivated.id') != "null" ? 
         ;             (cmd "niri" "msg" "workspaces") : 
         ;             "niri msg -j workspaces"}
-        "${test_listen}"
+        test_listen
     )
 )
 (deflisten test_listen
-    ; `niri msg -j event-stream`
+    `niri msg -j event-stream`
     ; `niri msg -j event-stream | jq -c "
     ;      if .WorkspaceActivated then 
     ;          "$(niri msg -j workspaces | jq -c 'sort_by(.idx)')"
@@ -156,7 +156,7 @@
     ;          empty 
     ;      end
     ;  " --argjson WORKSPACES "$(niri msg -j workspaces | jq -c 'sort_by(.idx)')"`
-    `niri msg -j workspaces | jq -c 'sort_by(.idx)'`
+    ; `niri msg -j workspaces`
 )
 
 

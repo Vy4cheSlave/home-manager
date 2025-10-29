@@ -29,6 +29,7 @@
       # eww ###############
       libnotify
       jq
+      socat
       #####################
       pciutils
       # games #############
