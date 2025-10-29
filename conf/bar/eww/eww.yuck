@@ -144,7 +144,7 @@
         ; {jq(test_listen, '.WorkspaceActivated.id') != "null" ? 
         ;             (cmd "niri" "msg" "workspaces") : 
         ;             "niri msg -j workspaces"}
-        test_listen
+        {(test_listen.WorkspacesChanged)}
     )
 )
 (deflisten test_listen
