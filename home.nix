@@ -41,8 +41,9 @@
       protonup
       #####################
       # niri ##############
-      mpvpaper
+      # mpvpaper
       #####################
+      gifski
     ];
 
     username = "vch";
@@ -52,9 +53,9 @@
   };
 
   fonts.fontconfig.enable = true;
-  # services.swww = {
-  #   enable = true;
-  # };
+  services.swww = {
+    enable = true;
+  };
   programs.btop = {
     enable = true;
     themes = {
