@@ -14,7 +14,7 @@
       rPackages.phosphoricons
       #########################
       ghostty
-      #librewolf
+      blender
       helix
       git
       gnumake
@@ -29,7 +29,6 @@
       # eww ###############
       libnotify
       jq
-      socat
       #####################
       pciutils
       # games #############
