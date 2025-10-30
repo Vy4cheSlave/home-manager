@@ -41,7 +41,7 @@
       protonup
       #####################
       # niri ##############
-      # mpvpaper
+      # mpvpaper 
       #####################
       gifski
     ];
