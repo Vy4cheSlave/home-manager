@@ -242,6 +242,7 @@ programs.steam = {
   # Добавляем 32-битные библиотеки, которые нужны для Wine/Bottles
   hardware.graphics.enable = true;
   hardware.graphics.enable32Bit = true;
+  hardware.opengl.enable = true;
 ####################################################################
 
   # Enable touchpad support (enabled default in most desktopManager).
