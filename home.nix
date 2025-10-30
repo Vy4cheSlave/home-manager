@@ -13,11 +13,14 @@
       nerd-fonts._3270
       rPackages.phosphoricons
       #########################
+
       ghostty
+
       #########################
       blender
       gimp
       #########################
+
       helix
       git
       gnumake
@@ -36,6 +39,9 @@
       pciutils
       # games #############
       protonup
+      #####################
+      # niri ##############
+      mpvpaper
       #####################
     ];
 
