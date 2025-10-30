@@ -14,7 +14,10 @@
       rPackages.phosphoricons
       #########################
       ghostty
+      #########################
       blender
+      gimp
+      #########################
       helix
       git
       gnumake
