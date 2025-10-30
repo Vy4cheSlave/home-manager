@@ -52,9 +52,9 @@
   };
 
   fonts.fontconfig.enable = true;
-  services.swww = {
-    enable = true;
-  };
+  # services.swww = {
+  #   enable = true;
+  # };
   programs.btop = {
     enable = true;
     themes = {
