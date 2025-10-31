@@ -50,7 +50,13 @@
         :orientation "h"
         (box :class "box_test")
         (clock)
-        (box :class "box_test")
+        (systray 
+            :class "box_test"
+            :class "systray"
+            :orientation "h"
+            :space-evenly false
+            :halign "end"
+        )
     )
 )
 

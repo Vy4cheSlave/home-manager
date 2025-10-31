@@ -19,18 +19,18 @@
       obs-studio
       #########################
       # cli ###################
-      helix
+      helix     # text editor #
       git
       gnumake
-      ghostty
-      pciutils
-      bluetuith
+      ghostty   # terminal ####
+      pciutils  # ?
+      bluetuith # bluetooth ###
       #########################
       # gui ###################
-      vscodium
-      nekoray
-      nautilus
-      #rofi
+      vscodium  # ide
+      nekoray   # vpn
+      nautilus  # file manager 
+      #rofi     # app-launcher
       #########################
 
       # не разобрался как работает пока
@@ -38,11 +38,11 @@
       # nftables      
 
       # eww ###############
-      libnotify
-      jq
+      libnotify # alert ###
+      jq        # json-pars
       #####################
       # games #############
-      protonup
+      protonup  # ?
       #####################
       # niri ##############
       # mpvpaper 
@@ -110,8 +110,8 @@
   xdg.configFile."niri/config.kdl".source = ./conf/wm/niri/config.kdl;
 
   programs.fuzzel.enable = true; # Super+D in the default setting (app launcher)
-  programs.swaylock.enable = true; # Super+Alt+L in the default setting (screen locker)
-  services.mako.enable = true; # notification daemon
+  programs.swaylock.enable = true; # analogs: gtklock # Super+Alt+L in the default setting (screen locker)
+  services.mako.enable = true; # analogs: dunst # notification daemon
   services.swayidle.enable = true; # idle management daemon
   services.polkit-gnome.enable = true; # polkit
 
