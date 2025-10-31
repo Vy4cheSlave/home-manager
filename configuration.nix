@@ -116,7 +116,6 @@
     };
   };
   services.blueman.enable = true;
-  services.bluetuith.enable = true;
 ####################################################################
 ### Steam ##########################################################
 # programs.xwayland.enable = true;

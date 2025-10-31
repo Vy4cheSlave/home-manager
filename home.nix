@@ -13,22 +13,26 @@
       nerd-fonts._3270
       rPackages.phosphoricons
       #########################
-
-      ghostty
-
       # graphic editors #######
       blender
       gimp
       obs-studio
       #########################
-
+      # cli ###################
       helix
       git
       gnumake
+      ghostty
+      pciutils
+      bluetuith
+      #########################
+      # gui ###################
       vscodium
       nekoray
       nautilus
       #rofi
+      #########################
+
       # не разобрался как работает пока
       # zapret
       # nftables      
@@ -37,7 +41,6 @@
       libnotify
       jq
       #####################
-      pciutils
       # games #############
       protonup
       #####################
@@ -51,7 +54,7 @@
       mpv
       #####################
       # local ai ##########
-      alpaca
+      # alpaca
       #####################
     ];
 
