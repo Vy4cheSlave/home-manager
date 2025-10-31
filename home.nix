@@ -16,9 +16,10 @@
 
       ghostty
 
-      #########################
+      # graphic editors #######
       blender
       gimp
+      obs-studio
       #########################
 
       helix
