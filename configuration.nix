@@ -95,6 +95,7 @@
   services.pipewire = {
     enable = true;
     alsa.enable = true;
+    jack.enable = true;
     pulse.enable = true;
     wireplumber.enable = true;
   };
@@ -115,6 +116,7 @@
     };
   };
   services.blueman.enable = true;
+  services.bluetuith.enable = true;
 ####################################################################
 ### Steam ##########################################################
 # programs.xwayland.enable = true;
