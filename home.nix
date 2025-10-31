@@ -43,8 +43,15 @@
       # niri ##############
       # mpvpaper 
       #####################
+      # gif-creator #######
       gifski # gifski --fps 30 --quality 90 --width=1920 --height=1080 --output <output>.gif <input>
+      #####################
+      # video-player ######
       mpv
+      #####################
+      # local ai ##########
+      alpaca
+      #####################
     ];
 
     username = "vch";
